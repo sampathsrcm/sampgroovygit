@@ -9,7 +9,7 @@ job('First_maven_project_via groovy_script_DSL')
       scm 
        {
                                      
-            git("https://github.com/sampathsrcm/sampgroovygit.git", master)
+            git("https://github.com/sampathsrcm/Mavenproj-test.git", master)
        
        }
        
