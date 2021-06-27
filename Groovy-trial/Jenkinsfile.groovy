@@ -22,7 +22,7 @@ job('First_maven_project_via groovy_script_DSL')
        
        steps {
            
-           maven('clean package' ,'C:\\Users\\sampy\\git\\sampygroovy\\groovyturorial\\pom.xml' )
+           maven('clean package' ,'C:\Users\sampy\git\Mavenproj-test\art01\pom.xml' )
        }
        
        publishers {
