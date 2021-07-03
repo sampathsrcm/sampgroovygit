@@ -1,26 +1,23 @@
 pipeline {
-	agent any
-	
-	Stages {
-		
-		Stage('Init'){
-			
-			bat 'This is sampath from F-17'
-			
-		}
-		Stage('Build'){
-			
-			bat 'Building maven project'
-			
-		}
-		stage('Deploy'){
-			
-			bat 'deploy en staging area';
-			
-		}
-		
-		
-	}
+    agent any
 
-	
+    stages {
+        stage('init') {
+            steps {
+                echo 'This is sampath from F-17'
+            }
+        }
+        
+        stage('Build'){
+            steps {
+                echo 'Build from maven'
+            }
+        }
+        stage('deploy'){
+            
+            steps {
+                echo 'Deploy to staging area'
+            }
+        }
+    }
 }
