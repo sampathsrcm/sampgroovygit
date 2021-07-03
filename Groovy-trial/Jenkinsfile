@@ -1,0 +1,26 @@
+Pipeline {
+	agent any
+	
+	Stages {
+		
+		Stage('Init'){
+			
+			bat 'This is sampath from F-17'
+			
+		}
+		Stage('Build'){
+			
+			bat 'Building maven project'
+			
+		}
+		stage('Deploy'){
+			
+			bat 'deploy en staging area';
+			
+		}
+		
+		
+	}
+
+	
+}
