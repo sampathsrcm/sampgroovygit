@@ -4,27 +4,30 @@ pipeline
 
     stages 
     {
-        stage('init') 
+        stage('Compile Stage') 
         {
             steps
              {
-                echo 'This is sampath from F-17'
+                withMaven(maven : 'LocalMaven')
+                sh 'mvn clean compile'
              }
         }
         
-        stage('Build')
+        stage('Build and Testing stage')
         {
             steps 
             {
-                echo 'Build from maven'
+                withMaven(maven : 'LocalMaven')
+                sh 'mvn test'
             }
         }
-        stage('deploy')
+        stage('Deployment stage')
         {
             
             steps 
             {
-                echo 'Deploy to staging area'
+                withMaven(maven : 'LocalMaven')
+                sh 'mvn deploy'
             }
          }
     }
