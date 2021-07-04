@@ -1,23 +1,31 @@
-pipeline {
+pipeline 
+{
     agent any
 
-    stages {
-        stage('init') {
-            steps {
+    stages 
+    {
+        stage('init') 
+        {
+            steps
+             {
                 echo 'This is sampath from F-17'
-            }
+             }
         }
         
-        stage('Build'){
-            steps {
+        stage('Build')
+        {
+            steps 
+            {
                 echo 'Build from maven'
             }
         }
-        stage('deploy'){
+        stage('deploy')
+        {
             
-            steps {
+            steps 
+            {
                 echo 'Deploy to staging area'
             }
-        }
+         }
     }
-}
+ }
