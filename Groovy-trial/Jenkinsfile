@@ -1,34 +1,31 @@
-pipeline 
-{
+pipeline {
     agent any
 
-    stages 
-    {
-        stage('Compile Stage') 
+    stages {
+        stage('init') 
         {
-            steps
-             {
-                //withMaven(maven : 'LocalMaven')
-                sh 'mvn clean compile'
-             }
+            steps 
+            {
+                echo 'This is sampath from F-17'
+            }
         }
         
-        stage('Build and Testing stage')
+        stage('Build')
         {
             steps 
             {
-               // withMaven(maven : 'LocalMaven')
-                sh 'mvn test'
+                echo 'Build from maven'
             }
         }
-        stage('Deployment stage')
+        stage('deploy')
         {
             
-            steps 
-            {
-               // withMaven(maven : 'LocalMaven')
-                sh 'mvn deploy'
-            }
-         }
+            steps
+             {
+                echo 'Deploy to staging area'
+             }
+        }
     }
- }
+    
+    
+  }
