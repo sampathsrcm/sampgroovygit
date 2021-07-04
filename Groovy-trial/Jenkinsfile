@@ -6,7 +6,7 @@ pipeline {
         {
             steps 
             {
-                echo 'This is sampath from F-17'
+                echo 'This is sampath from F-17  - 1'
             }
         }
         
@@ -14,7 +14,7 @@ pipeline {
         {
             steps 
             {
-                echo 'Build from maven'
+                echo 'Build from maven - 2'
             }
         }
         stage('deploy to stageing env')
@@ -22,7 +22,7 @@ pipeline {
             
             steps
              {
-                echo 'Deploy to staging area'
+                echo 'Deploy to staging area - 3'
              }
         }
         
@@ -31,7 +31,7 @@ pipeline {
             
             steps
              {
-                echo 'Deploy to production area'
+                echo 'Deploy to production area - 4'
              }
         }
     }
