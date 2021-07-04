@@ -17,12 +17,21 @@ pipeline {
                 echo 'Build from maven'
             }
         }
-        stage('deploy')
+        stage('deploy to stageing env')
         {
             
             steps
              {
                 echo 'Deploy to staging area'
+             }
+        }
+        
+         stage('deploy to production env')
+        {
+            
+            steps
+             {
+                echo 'Deploy to production area'
              }
         }
     }
